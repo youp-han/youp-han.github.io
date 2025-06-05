@@ -2,30 +2,71 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube Cleaner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background-color: black;
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      width: 90%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
     }
     iframe {
       width: 100vw;
       height: 100vh;
       border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const videoId = params.get('v') || 'dQw4w9WgXcQ'; // 기본 영상 (Rickroll)
-    document.write(`<iframe 
-      src="https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&modestbranding=1"
-      allowfullscreen
-      allow="autoplay"
-    ></iframe>`);
-  </script>
+
+<div id="inputArea">
+  <h2>YouTube 클린 플레이어</h2>
+  <input type="text" id="youtubeUrl" placeholder="유튜브 URL을 입력하세요" />
+  <button onclick="loadVideo()">재생하기</button>
+</div>
+
+<div id="playerArea" style="display:none;">
+  <iframe id="player" allowfullscreen allow="autoplay"></iframe>
+</div>
+
+<script>
+  function extractVideoId(url) {
+    const regExp = /(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([^&\n?#]+)/;
+    const match = url.match(regExp);
+    return match ? match[1] : null;
+  }
+
+  function loadVideo() {
+    const url = document.getElementById("youtubeUrl").value;
+    const videoId = extractVideoId(url);
+    if (!videoId) {
+      alert("유효한 유튜브 URL이 아닙니다.");
+      return;
+    }
+    const iframe = document.getElementById("player");
+    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1&modestbranding=1`;
+    document.getElementById("inputArea").style.display = "none";
+    document.getElementById("playerArea").style.display = "block";
+  }
+</script>
+
 </body>
 </html>
