@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>YouTube 클린 플레이어 (Invidious)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <title>YouTube 클린 플레이어 (Piped)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <style>
     * {
       box-sizing: border-box;
@@ -29,8 +29,11 @@
       max-width: 500px;
       display: flex;
       flex-direction: column;
-      align-items: stretch;
       gap: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ff4444;
+      padding: 20px;
+      border-radius: 8px;
     }
     input {
       width: 100%;
@@ -75,16 +78,25 @@
   <h2>YouTube 클린 플레이어</h2>
 
   <div id="inputArea">
-    <input type="text" id="youtubeUrl" placeholder="유튜브 전체 URL을 입력하세요" />
+    <input
+      type="text"
+      id="youtubeUrl"
+      placeholder="유튜브 전체 URL을 입력하세요"
+    />
     <button onclick="loadVideo()">재생하기</button>
   </div>
 
   <div id="playerArea">
-    <iframe id="player" allowfullscreen allow="autoplay"></iframe>
+    <iframe
+      id="player"
+      allowfullscreen
+      allow="autoplay"
+    ></iframe>
   </div>
 
   <script>
     function extractVideoId(url) {
+      // YouTube 전체 URL에서 videoId 만 추출하는 정규식
       const regExp = /(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([^&\n?#]+)/;
       const match = url.match(regExp);
       return match ? match[1] : null;
@@ -93,12 +105,15 @@
     function loadVideo() {
       const url = document.getElementById("youtubeUrl").value.trim();
       const videoId = extractVideoId(url);
+
       if (!videoId) {
         alert("유효한 유튜브 URL이 아닙니다.");
         return;
       }
+
       const iframe = document.getElementById("player");
-      iframe.src = `https://yewtu.be/embed/${videoId}?autoplay=1&controls=1`;
+      // ▶ Piped 공식 인스턴스(piped.video) 사용
+      iframe.src = `https://piped.video/embed/${videoId}?autoplay=1&quality=1080`;
       document.getElementById("inputArea").style.display = "none";
       document.querySelector("h2").style.display = "none";
       document.getElementById("playerArea").style.display = "block";
