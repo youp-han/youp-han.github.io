@@ -1,124 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>YouTube 플레이어 (Piped)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: white;
-      min-height: 100vh;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    #inputArea {
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 2px solid #ff4444;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      background-color: white;
-      color: black;
-    }
-    button {
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      background-color: #ff4444;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #cc0000;
-    }
-    #playerArea {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: black;
-      display: none;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniRent - 스마트 임대 관리 솔루션</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        header { background-color: #2c3e50; color: white; padding: 1rem 2rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 0.5rem 0 0; font-size: 1.2rem; color: #bdc3c7; }
+        nav { background-color: #34495e; padding: 1rem; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .hero { text-align: center; padding: 4rem 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .hero h2 { font-size: 2.8rem; color: #2c3e50; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; color: #555; margin-bottom: 2rem; }
+        .cta-button { background-color: #e67e22; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; text-decoration: none; }
+        .cta-button:hover { background-color: #d35400; }
+        .features { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 3rem; }
+        .feature-card { background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 30%; min-width: 280px; margin: 1rem; padding: 2rem; text-align: center; }
+        .feature-card h3 { font-size: 1.8rem; color: #34495e; margin-bottom: 1rem; }
+        .feature-card p { font-size: 1rem; line-height: 1.6; }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    </style>
 </head>
 <body>
 
-  <h2>YouTube piped 플레이어</h2>
+    <header>
+        <h1>UniRent</h1>
+        <p>소규모 임대 사업자를 위한 스마트한 임대 관리</p>
+    </header>
 
-  <div id="inputArea">
-    <input
-      type="text"
-      id="youtubeUrl"
-      placeholder="유튜브 전체 URL을 입력하세요"
-    />
-    <button onclick="loadVideo()">재생하기</button>
-  </div>
+    <nav>
+        <a href="#features">핵심 기능</a>
+        <a href="#about">솔루션 소개</a>
+        <a href="#contact">문의하기</a>
+    </nav>
 
-  <div id="playerArea">
-    <iframe
-      id="player"
-      allowfullscreen
-      allow="autoplay"
-    ></iframe>
-  </div>
+    <div class="container">
+        <div class="hero">
+            <h2>복잡한 임대 관리는 이제 그만!</h2>
+            <p>UniRent으로 임차인, 계약, 청구, 자산 관리를 한 곳에서 해결하세요.<br>반복적인 업무는 자동화하고, 중요한 데이터는 한눈에 파악할 수 있습니다.</p>
+            <a href="#contact" class="cta-button">지금 시작하기</a>
+        </div>
 
-  <script>
-    function extractVideoId(url) {
-      // YouTube 전체 URL에서 videoId 만 추출하는 정규식
-      const regExp = /(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([^&\n?#]+)/;
-      const match = url.match(regExp);
-      return match ? match[1] : null;
-    }
+        <div id="features" class="features">
+            <div class="feature-card">
+                <h3>통합 대시보드</h3>
+                <p>전체 임대 현황, 공실률, 월별 수익 및 미납 현황을 한눈에 파악하여 신속한 의사결정을 지원합니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>업무 자동화</h3>
+                <p>매월 반복되는 월세 청구서 발행과 미납금 관리를 자동화하여 시간과 노력을 획기적으로 줄여줍니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>PDF 보고서</h3>
+                <p>월별 수익, 비용, 임차인 변동 현황 등 상세한 내용이 담긴 전문적인 보고서를 PDF로 생성하고 관리합니다.</p>
+            </div>
+        </div>
 
-    function loadVideo() {
-      const url = document.getElementById("youtubeUrl").value.trim();
-      const videoId = extractVideoId(url);
+        <div id="about" style="margin-top: 3rem; padding: 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; color: #2c3e50;">UniRent: 당신의 임대 사업을 위한 최고의 파트너</h2>
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.7;">
+                UniRent은 1인 또는 소규모 팀으로 임대 사업을 운영하는 분들을 위해 탄생했습니다. 엑셀 파일과 수기 장부로 관리하던 복잡한 정보들을 체계적인 데이터베이스로 옮겨오고, 번거로운 반복 업무는 자동화하여 사업의 본질에만 집중할 수 있도록 돕습니다. 자산 등록부터 임차인 관리, 계약 체결, 월별 청구 및 수납 처리, 그리고 현황 보고까지. 임대 관리에 필요한 모든 기능을 UniRent 하나로 해결할 수 있습니다.
+            </p>
+        </div>
+    </div>
 
-      if (!videoId) {
-        alert("유효한 유튜브 URL이 아닙니다.");
-        return;
-      }
-
-      const iframe = document.getElementById("player");
-      // ▶ Piped 공식 인스턴스(piped.video) 사용
-      iframe.src = `https://piped.video/embed/${videoId}?autoplay=1&quality=1080`;
-      document.getElementById("inputArea").style.display = "none";
-      document.querySelector("h2").style.display = "none";
-      document.getElementById("playerArea").style.display = "block";
-    }
-  </script>
+    <footer id="contact">
+        <p>&copy; 2025 UniRent. All Rights Reserved.</p>
+        <p>문의: contact@unirent.com</p>
+    </footer>
 
 </body>
 </html>
