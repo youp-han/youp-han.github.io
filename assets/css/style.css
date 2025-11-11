@@ -1,0 +1,119 @@
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 1.5rem;
+    color: #a0a0a0;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #333;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.tech-stack ul, .advantages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-stack li, .advantages li {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #007aff;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    header .subtitle {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 150px;
+    border-radius: 12px;
+}
+

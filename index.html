@@ -1,94 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniRent - 부동산 임대 관리를 위한 종합 솔루션</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
-        header { background-color: #2c3e50; color: white; padding: 1rem 2rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 0.5rem 0 0; font-size: 1.2rem; color: #bdc3c7; }
-        nav { background-color: #34495e; padding: 1rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
-        .hero { text-align: center; padding: 4rem 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .hero h2 { font-size: 2.8rem; color: #2c3e50; margin-bottom: 1rem; }
-        .hero p { font-size: 1.3rem; color: #555; margin-bottom: 2rem; }
-        .cta-button { background-color: #e67e22; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; text-decoration: none; }
-        .cta-button:hover { background-color: #d35400; }
-        .features { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 3rem; }
-        .feature-card { background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 30%; min-width: 280px; margin: 1rem; padding: 2rem; text-align: center; }
-        .feature-card h3 { font-size: 1.8rem; color: #34495e; margin-bottom: 1rem; }
-        .feature-card p { font-size: 1rem; line-height: 1.6; }
-        .tech-stack { text-align: center; padding: 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 3rem; }
-        .tech-stack h2 { font-size: 2.2rem; color: #2c3e50; margin-bottom: 1.5rem; }
-        .tech-stack .logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; }
-        .tech-stack .logos span { font-size: 1.2rem; background-color: #ecf0f1; color: #34495e; padding: 10px 20px; border-radius: 5px; }
-        footer { background-color: #2c3e50; color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; }
-    </style>
+    <title>UniRent - 스마트한 임대 관리 솔루션</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>UniRent</h1>
-        <p>부동산 임대 관리를 위한 종합 솔루션</p>
+        <div class="container">
+            <h1>UniRent</h1>
+            <p class="subtitle">부동산 임대 관리를 위한 종합 솔루션</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="#features">핵심 기능</a>
-        <a href="#tech-stack">기술 스택</a>
-        <a href="#about">솔루션 소개</a>
-        <a href="#contact">문의하기</a>
-    </nav>
-
-    <div class="container">
-        <div class="hero">
-            <h2>효율적인 임대 관리를 위한 선택, UniRent</h2>
-            <p>자산, 임차인, 임대 계약, 청구 관리를 간소화하여 임대 관리를 효율적으로 만들어보세요.<br>UniRent은 Flutter로 제작된 종합 임대 관리 솔루션입니다.</p>
-            <a href="#contact" class="cta-button">문의하기</a>
-        </div>
-
-        <div id="features" class="features">
-            <div class="feature-card">
-                <h3>인증 및 보안</h3>
-                <p>이메일/비밀번호, 생체 인증(지문/Face ID)을 지원하며, flutter_secure_storage를 통해 민감 정보를 안전하게 보호합니다.</p>
+    <main>
+        <section id="about">
+            <div class="container">
+                <img src="assets/images/Icon-App-1024x1024@1x.png" alt="UniRent Logo" class="logo">
+                <h2>UniRent 소개</h2>
+                <p>UniRent는 부동산 관리자를 위한 Flutter 기반의 크로스 플랫폼 임대 관리 애플리케이션입니다. 물건 관리, 임차인 관리, 계약 관리, 청구서 발행 등 부동산 임대 업무의 전 과정을 효율적으로 처리할 수 있도록 설계되었습니다.</p>
             </div>
-            <div class="feature-card">
-                <h3>임대 관리 자동화</h3>
-                <p>자산, 임차인, 계약(CRUD)부터 월세 자동 청구, 수납 내역 등록 및 자동 배분, PDF 영수증 발행까지 모두 자동화됩니다.</p>
-            </div>
-            <div class="feature-card">
-                <h3>데이터 관리</h3>
-                <p>DB 자동/수동 백업 및 복원 기능을 제공하며, CSV/Excel 데이터 연동을 통해 기존 데이터를 쉽게 가져올 수 있습니다.</p>
-            </div>
-        </div>
+        </section>
 
-        <div id="tech-stack" class="tech-stack">
-            <h2>핵심 기술 스택</h2>
-            <div class="logos">
-                <span>Flutter</span>
-                <span>Riverpod</span>
-                <span>go_router</span>
-                <span>Drift (SQLite)</span>
-                <span>Freezed</span>
-                <span>Dio</span>
-                <span>Material 3</span>
+        <section id="features">
+            <div class="container">
+                <h2>주요 기능</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>대시보드</h3>
+                        <p>주요 지표를 실시간으로 모니터링하고, 자산 및 청구 현황을 한눈에 파악합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>자산 관리</h3>
+                        <p>건물 및 호실의 상세 정보를 등록하고 상태(임대가능/임대중/점검중)를 추적합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>임차인 및 계약 관리</h3>
+                        <p>임차인 정보, 연락처, 계약 이력 및 임대차 계약의 생성부터 만료까지 관리합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>청구 및 결제</h3>
+                        <p>월세 자동 청구서 생성, 결제 내역 추적, 미수금 관리 등 재무 관리를 자동화합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>비용 및 보고서</h3>
+                        <p>건물/호실별 비용을 기록 및 분석하고, 다양한 관리 보고서를 생성합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>활동 로그</h3>
+                        <p>시스템 내에서 발생하는 모든 중요한 활동 이력과 사용자 작업을 기록하여 투명성을 높입니다.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="about" style="margin-top: 3rem; padding: 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <h2 style="text-align: center; color: #2c3e50;">UniRent: 당신의 임대 사업을 위한 최고의 파트너</h2>
-            <p style="text-align: center; font-size: 1.1rem; line-height: 1.7;">
-                UniRent은 1인 또는 소규모 팀으로 임대 사업을 운영하는 분들을 위해 탄생했습니다. 엑셀 파일과 수기 장부로 관리하던 복잡한 정보들을 체계적인 데이터베이스로 옮겨오고, 번거로운 반복 업무는 자동화하여 사업의 본질에만 집중할 수 있도록 돕습니다. 자산 등록부터 임차인 관리, 계약 체결, 월별 청구 및 수납 처리, 그리고 현황 보고까지. 임대 관리에 필요한 모든 기능을 UniRent 하나로 해결할 수 있습니다.
-            </p>
-        </div>
-    </div>
+        <section id="architecture">
+            <div class="container">
+                <h2>아키텍처</h2>
+                <p>Clean Architecture와 MVVM (Model-View-ViewModel) 패턴을 결합하여 확장 가능하고 유지보수가 용이한 구조로 설계되었습니다. 데이터 흐름은 Presentation, Application, Data의 3개 계층으로 명확히 분리됩니다.</p>
+            </div>
+        </section>
 
-    <footer id="contact">
-        <p>&copy; 2025 UniRent. All Rights Reserved.</p>
-        <p>문의: youp.han@gmail.com</p>
+        <section id="tech-stack" class="tech-stack">
+            <div class="container">
+                <h2>핵심 기술 스택</h2>
+                <ul>
+                    <li><strong>프레임워크 & 언어:</strong> Flutter & Dart</li>
+                    <li><strong>상태 관리:</strong> Riverpod</li>
+                    <li><strong>데이터 모델링:</strong> Freezed, JSON Serializable</li>
+                    <li><strong>데이터베이스:</strong> Drift (SQLite ORM)</li>
+                    <li><strong>네트워크:</strong> Dio</li>
+                    <li><strong>라우팅:</strong> go_router</li>
+                    <li><strong>UI/UX:</strong> Material 3, 반응형 디자인</li>
+                    <li><strong>문서 처리:</strong> pdf, printing, excel</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>개발 및 비지니스 협업 문의: <a href="mailto:youp.han@gmail.com">youp.han@gmail.com</a></p>
+            <p>&copy; 2025 JJST (제스트). All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
