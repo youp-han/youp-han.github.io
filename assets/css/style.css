@@ -117,3 +117,79 @@ a:hover {
     border-radius: 12px;
 }
 
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+}
+
+/* Download Button */
+.btn-download {
+    display: inline-block;
+    background-color: #007aff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+
+.nav-brand-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+.nav-subtitle {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #888888; /* Dimmer color */
+    margin-top: -5px; /* Adjust spacing */
+}
+
+/* Adjust .top-nav .container to align items correctly */
+.top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Re-center the main items */
+}
+
