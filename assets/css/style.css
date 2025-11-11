@@ -1,4 +1,3 @@
-
 body {
     background-color: #121212;
     color: #e0e0e0;
@@ -12,6 +11,55 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-subtitle {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: -5px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    font-size: 1rem;
 }
 
 header {
@@ -30,6 +78,28 @@ header .subtitle {
     color: #a0a0a0;
 }
 
+/* Download Button */
+.btn-download {
+    display: inline-block;
+    background-color: #007aff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+main {
+    display: block;
+}
+
 section {
     padding: 60px 0;
     border-bottom: 1px solid #333;
@@ -44,6 +114,13 @@ h2 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 150px;
+    border-radius: 12px;
 }
 
 .feature-grid {
@@ -65,12 +142,12 @@ h2 {
     margin-top: 0;
 }
 
-.tech-stack ul, .advantages ul {
+.tech-stack ul {
     list-style: none;
     padding: 0;
 }
 
-.tech-stack li, .advantages li {
+.tech-stack li {
     background-color: #1e1e1e;
     padding: 15px;
     margin-bottom: 10px;
@@ -109,87 +186,3 @@ a:hover {
         font-size: 2rem;
     }
 }
-
-.logo {
-    display: block;
-    margin: 0 auto 30px auto;
-    max-width: 150px;
-    border-radius: 12px;
-}
-
-
-/* Navigation Bar */
-.top-nav {
-    background-color: #1e1e1e;
-    border-bottom: 1px solid #333;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    font-size: 1rem;
-}
-
-/* Download Button */
-.btn-download {
-    display: inline-block;
-    background-color: #007aff;
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    margin-top: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-download:hover {
-    background-color: #0056b3;
-    text-decoration: none;
-}
-
-
-.nav-brand-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start of the cross axis */
-}
-
-.nav-subtitle {
-    font-size: 0.8rem; /* Smaller font size */
-    color: #888888; /* Dimmer color */
-    margin-top: -5px; /* Adjust spacing */
-}
-
-/* Adjust .top-nav .container to align items correctly */
-.top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Re-center the main items */
-}
-
