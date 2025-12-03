@@ -86,9 +86,26 @@ header .subtitle {
     padding: 12px 25px;
     border-radius: 25px;
     font-weight: bold;
-    margin-top: 30px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-manual {
+    color: #8BC34A; /* Light Green */
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-manual:hover {
+    color: #9CCC65; /* Lighter green on hover */
 }
 
 .btn-download:hover {
