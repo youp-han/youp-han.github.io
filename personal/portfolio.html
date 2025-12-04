@@ -469,7 +469,7 @@
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">2차 안드로이드 프로젝트 (POS, E-Commerce, Customer Loyalty 등)</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
                                 <p style="color: #ccc; margin-bottom: 15px;">전자담배 제품 의 온라인 전자담배 판매가 가능해지면서, 외부에서 개발한 E-Commerce 서비스와 기존 세일즈 판매 시스템 간의 데이터 연동이 필요한 상황이 발생하였음. 이를 위해 POS, Customer Loyalty 등 다양한 모듈과의 연계 요구 사항이 확산되었고, 이에 대응하기 위한 2차 안드로이드 프로젝트가 진행되었음.</p>
-                                <p style="color: #ccc; margin-bottom: 15px;">본 프로젝트에서는 프로젝트 리드와 테스트 리드 역할을 동시에 수행하였으며, 각종 회의 주도, 개발자 교육을 위한 산출물 작성, 기능 정의 및 검증 가이드 문서 작성 등을 통해 프로젝트 전반을 총괄하였음.</p>
+                                <p style="color: #ccc; margin-bottom: 15px;">본 프로젝트에서는 프로젝트 리드와 테스트 리드 역할을 동시에 수행하였으며, 각종 회의를 주도하고 개발자 교육을 위한 산출물을 작성하였음. 또한 작업·코드 리뷰를 통해 개발팀과 지속적으로 소통하며, 기능 정의 문서와 검증 가이드를 작성하는 등 프로젝트 추진에 필요한 핵심 업무들을 담당하였음.</p>
                             </div>
                         </div>
                     </li>
@@ -554,6 +554,12 @@
                         <div class="project-details" style="margin-bottom: 20px;">
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">라스트 캠핑 가격비교 사이트 구축</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 개발 환경</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">캠핑 커뮤니티, 가격비교, 캠핑장 검색 등 캠퍼들이 필요한 다양한 정보를 한 곳에서 제공하는 포털 성격의 프로젝트였음. 개발자 롤로 투입되었으며, 이전 PKay2 팀원들과 함께하여 팀워크 측면에서는 안정적으로 협업할 수 있었음.<br>개발 환경은 CakePHP 기반의 MVC 구조였으며, MySQL 및 CakePHP 내장 ORM을 활용하는 프레임워크 특성을 이해하며 개발을 진행하였음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 문제</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">담당한 화면 중 특히 난이도가 높았던 부분은 20여 가지 이상의 조건(지역, 구조, 편의시설, 날짜 등) 으로 검색되는 캠핑장 검색 화면이었음. 각 조건을 선택할 때마다 실시간으로 검색 리스트가 갱신되는 구조였는데, 초기 요구사항은 단순했으나 테스트 데이터가 완전하지 않았고, 테스트가 진행되면서 요구사항이 계속 변경되었음.<br>이로 인해 조건 처리 코드가 점점 복잡해지고 난독화되었으며, 결국 PL로부터 리팩토링을 지시받았으나, 코드 구조가 이미 너무 복잡해져 처음으로 개발 진행 포기 선언을 하였음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 해결</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">이후, PM 의 요청으로 PO 팀의 도움을 받아 해당 화면의 요구사항을 전면 재정리하였고, 개발팀 선배들과 함께 view 및 controller 레벨의 코드를 리팩토링하여 기능 요구사항에 맞는 최종 결과물을 완성하였음.<br>이를 통해 복잡한 요구사항 변화 속에서 리팩토링의 중요성과 구조적 설계의 필요성을 크게 깨닫는 프로젝트였음.</p>
                             </div>
                         </div>
                     </li>
@@ -566,6 +572,12 @@
                         <div class="project-details" style="margin-bottom: 20px;">
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">Gmarket 제휴 게임 아이템 거래 사이트 구축</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 배경/환경</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">플레이어들이 이용하는 다양한 온라인 게임에서 획득한 전자화폐 및 아이템을 안전하게 거래할 수 있는 게임 아이템 거래 솔루션 구축 프로젝트였음. G마켓과 제휴하여 Gmarket 도메인을 통해 접속할 수 있도록 하였으며, G마켓 회원은 별도의 로그인 과정 없이 즉시 게임 아이템 거래 사이트를 이용할 수 있도록 SSO 기반 연동을 구현하였음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 역할 및 수행 내용</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">프로젝트에서 개발자 역할을 담당하였으며, 전체 솔루션 중 고객 마이페이지(Client 화면) 를 개발하였음. 이후 사내 CS(Custom Service)팀에서 요구하는 운영 관리 솔루션을 추가 개발하였으며, 프로젝트는 MS MVC 3.0 기반에 SubSonic ORM을 적용한 구조로 진행하였음.</p>
+                                <p style="color: #ccc; margin-bottom: 15px;">특히 고객 전화 응대 프로세스를 지원하기 위해녹취파일 솔루션과의 연동,걸려온 전화번호 기반 고객 문의 이력 조회·저장 기능,상담 이력 관리 화면 구축등을 CS 팀과 긴밀히 협업하며 개발하였음.</p>
+                                <p style="color: #ccc; margin-bottom: 15px;">또한 특정 게임의 아이템 및 시세 정보를 수집하기 위한 웹 크롤러 프로그램을 개발하여 운영에 활용하였음. 프로젝트는 전반적으로 전자상거래(e-Commerce) 구조와 유사하여, 보안·정산·실시간 거래 처리 등 다양한 기술 요소를 경험하며 구현하였음.</p>
                             </div>
                         </div>
                     </li>
@@ -578,12 +590,50 @@
                         <div class="project-details" style="margin-bottom: 20px;">
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">LMS (Learning Management System) 개발</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 배경 및 문제점</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">평생교육원에서 사용할 LMS 솔루션을 내부에서 자체 개발하는 프로젝트로, 본인은 MS MVC 1.0 기반의 첫 프로젝트로 참여하였음.<br>투입 시점에는 약 6개월 동안 개발이 진행되었음에도 불구하고, 고객에게 전달된 산출물은 전혀 없었으며, 화면(UI) 구현도 거의 이뤄지지 않아 프로젝트 실패 상태로 간주되는 상황이었음.<br>본 프로젝트는 숭실대와 영동대 두 교육원을 대상으로 동일한 프레임워크와 유사한 데이터 엔티티 구조를 기반으로 하되, 교육원별 디자인 및 추가 요구사항을 반영하여 각각 납품하는 형태였음.<br>그러나 실제로는 프레임워크와 일부 데이터 엔티티만 존재하는 수준이었으며, 상세 요구사항 정의, UI 화면 설계, 기능 구현이 거의 진행되지 않아 고객은 6개월간 아무런 진척 상황도 전달받지 못한 상태였음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 해결 방안 및 수행 과정</h6>
+                                <ol style="list-style-type: decimal; padding-left: 20px; margin-bottom: 15px;">
+                                    <li>
+                                        <strong>개발 환경 정비 및 시스템 도입</strong>
+                                        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                                            <li>투입 직후 PM과 개발 인력들이 함께 프로젝트 운영 방식을 전면 재정립하였음.</li>
+                                            <li>공통 PM이 고객과 긴밀히 소통하며 요구사항 및 UI 피드백을 정리하여 전달</li>
+                                            <li>이 과정에서 처음으로 Agile 개발 방식을 경험</li>
+                                            <li>사내 서버에 Jira를 구축하여 To-do 리스트 및 작업 현황을 체계적으로 관리</li>
+                                            <li>Cruise Control 기반 자동 배포 시스템 도입→ 빠르고 안정적인 배포가 가능해져, 각 이터레이션마다 고객에게 개발 진척과 실행 가능한 결과물을 공유할 수 있었음</li>
+                                        </ul>
+                                        <p style="color: #ccc; margin-bottom: 15px;">이를 기반으로 프로젝트가 완전히 리셋된 상태에서 정상적인 개발 프로세스를 다시 구축하게 되었음.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Agile 기반 개발 실행</strong>
+                                        <p style="color: #ccc; margin-bottom: 5px;">본인은 영동대 측 개발 리드로서</p>
+                                        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                                            <li>개발자 2명</li>
+                                            <li>디자이너 1명</li>
+                                            <li>공통 PM과 협업하여 개발 일정을 주도하였음.</li>
+                                        </ul>
+                                        <p style="color: #ccc; margin-bottom: 5px;">수행한 주요 역할은 다음과 같음.</p>
+                                        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 5px;">
+                                            <li>개발자 2명의 역량을 진단하고 역할 및 To-do 리스트를 재배분</li>
+                                            <li>6주 이내 전 화면(UI) 개발 완료를 목표로 계획 수립 및 관리</li>
+                                            <li>화면 개발 완료 후 전체 흐름 테스트를 진행하고, 영동대 담당자와 함께 기능 검증 수행</li>
+                                            <li>테스트 기간 중 도출된 개선 사항을 지속적으로 반영</li>
+                                            <li>마지막 약 1주간의 UAT 기간 동안 집중적으로 품질 개선</li>
+                                            <li>최종적으로 영동대 평생교육원을 직접 방문하여 납품 승인(Complete Sign-off) 획득</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 결론 및 성과</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">해당 프로젝트는 고객사와 사내 모두에서 이미 실패한 프로젝트로 인식되고 있었으며, 내부 사기도 매우 낮은 상태였음. 이러한 환경에서 프로젝트를 정상화하고 납품까지 완료하는 과정은 큰 도전이었음.<br>그러나 고객과의 지속적인 소통을 통해 정확한 요구사항 파악과 빠른 피드백 반영이 고객 만족도를 높이는 핵심 요소임을 체감하였음. 이를 기반으로 프로젝트를 성공적으로 마무리하며, 문제 해결 능력, 고객 커뮤니케이션 능력, Agile 기반 개발 경험, 초기 실패 프로젝트의 정상화 노하우를 얻을 수 있었던 매우 가치 있는 경험이었음.</p>
                             </div>
                         </div>
                         <div class="project-details" style="margin-bottom: 20px;">
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">EduFunFun LMS 개발</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
                                 <p style="color: #ccc; margin-bottom: 5px;"><strong>기간:</strong> 2010.10 ~ 2010.12</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 배경</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">EduFunFun 프로젝트는 온라인 영어 학습을 위한 LMS(Learning Management System) 성격의 교육 플랫폼 구축 프로젝트였음. 본사에서 필리핀 지사에 영어 교육 시설을 설립하고, 한국과 필리핀 간의 실시간 영어 교육 서비스를 제공하기 위한 기반 시스템을 마련하고자 추진된 프로젝트였음.<br>본 LMS는 JSP 기반으로 개발되었으며, 필리핀 현지 선생님과 학습자가 실시간으로 연결될 수 있도록 <strong>화상 교육 솔루션(Video Conferencing)</strong>을 도입함. 이를 통해 학습자가 직접 선생님을 보며 듣고 상호작용할 수 있는 온라인 학습 환경을 제공하였고, 고객이 온라인으로 영어 수업에 쉽게 접근할 수 있도록 사용자 경험을 강화한 시스템을 구축하였음.</p>
                             </div>
                         </div>
                     </li>
@@ -600,6 +650,26 @@
                         <div class="project-details" style="margin-bottom: 20px;">
                             <h5 style="font-size: 1em; color: #e0e0e0; margin-top: 0; margin-bottom: 10px; font-weight: bold;">ELAND 주얼리 POS 시스템 개발 및 관리</h5>
                             <div style="border-left: 3px solid #3498db; padding-left: 15px; margin-top: 10px;">
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 배경</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">이랜드 그룹 내 주얼리 브랜드(Lloyd, Clue, OST)에서 직영점 및 가맹점 매장의 판매 업무에 사용되는 POS(Point of Sales) 시스템의 유지보수 및 기능 확장 개발을 담당하였음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 문제</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">초기에는 중국 개발센터가 신규 기능 개발을 모두 수행하고 본인은 운영(Run) 역할만 맡고 있었음.<br>그러나 시간이 지나면서 중국 개발센터와 주얼리 운영 실무진 간의 커뮤니케이션 문제가 지속적으로 발생함. 요구사항과 다른 화면이 전달되거나 일정이 지연되는 사례가 반복되었고, 결국 매장 운영에 지장을 줄 수준에 이르러 고객과 합의 후 추가 개발 업무를 국내에서 직접 진행하기로 결정됨.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 해결 방안</h6>
+                                <p style="color: #ccc; margin-bottom: 15px;">이에 따라 본인의 역할은 운영에서 운영 + 개발로 확대되었음.<br>해당 POS 시스템의 기술적 구조는 다음과 같았음.</p>
+                                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 15px;">
+                                    <li>Front: ASP + ASP Script</li>
+                                    <li>Business Layer: Visual Basic 6.0</li>
+                                    <li>컴파일된 DLL이 COM+에 등록되어 DB와 연동.</li>
+                                </ul>
+                                <p style="color: #ccc; margin-bottom: 15px;">웹 개발 경험이 많지 않은 상황이었으나, 기존에 이미 운영 중인 POS 화면이 있고, 매장 200개 이상에서 요청하는 기능 확장 위주였기 때문에 기존 소스 분석 → 구조 파악 → 신규 기능 확장의 흐름으로 빠르게 대응할 수 있었음.</p>
+                                <h6 style="color: #a2d2ff; margin-bottom: 10px; font-size: 1em;">📌 성과</h6>
+                                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 15px;">
+                                    <li>약 2주 만에 VB6 + ASP + COM+ 구조를 완전히 이해 및 습득</li>
+                                    <li>독자적으로 개발 환경 및 테스트 환경을 재구성하여 안정적인 개발 체계를 마련</li>
+                                    <li>이를 기반으로 신규 기능 개발 및 매장 운영 요구사항 대응을 안정적으로 수행</li>
+                                    <li>시스템 구조 및 서버 구성까지 파악하게 되면서, 이후 서버 리소스 증설·이전 작업에도 핵심 역할을 수행할 수 있었음</li>
+                                    <li>단순 코딩보다 POS 운영 비즈니스와 요구사항 분석 역량이 크게 성장한 프로젝트였으며, 동시에 새로운 언어·구조를 빠르게 습득하는 역량도 강화되는 경험이었음</li>
+                                </ul>
                             </div>
                         </div>
                     </li>
