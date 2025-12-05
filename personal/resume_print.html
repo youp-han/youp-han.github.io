@@ -13,56 +13,53 @@
             color: #333333;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.3;
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            font-size: 12px; /* Global base font size - further reduced */
         }
 
         .top-bar {
             background-color: #f5f5f5;
             border-bottom: 1px solid #dddddd;
-            padding: 15px 40px;
+            padding: 6px 20px; /* Further reduced padding */
             display: flex;
             align-items: center;
             flex-shrink: 0;
         }
 
         .top-bar h1 {
-            font-size: 1.8rem;
+            font-size: 1.2rem; /* Further reduced font size */
             margin: 0;
             color: #000000;
             border: none;
         }
 
         .top-bar .resume-title {
-            font-size: 1.2rem;
+            font-size: 0.7rem; /* Further reduced font size */
             color: #555555;
-            margin-left: 20px;
+            margin-left: 10px; /* Further reduced margin */
             font-weight: 300;
         }
 
         .main-container {
             display: flex;
-            flex-grow: 1;
-            overflow: hidden;
         }
 
         .left-menu {
             background-color: #f5f5f5;
             border-right: 1px solid #dddddd;
-            width: 280px;
-            padding: 15px 40px;
-            overflow-y: auto;
+            width: 160px; /* Further increased width as requested */
+            padding: 8px 10px; /* Slightly increased horizontal padding */
             flex-shrink: 0;
         }
         
         .left-menu h2 {
-            font-size: 1.5rem;
+            font-size: 0.8rem; /* Further reduced font size */
             color: #000000;
-            margin-bottom: 30px;
+            margin-bottom: 8px; /* Further reduced margin */
             border-bottom: 1px solid #cccccc;
-            padding-bottom: 15px;
+            padding-bottom: 5px;
         }
 
         .left-menu ul {
@@ -71,54 +68,53 @@
         }
 
         .left-menu li {
-            margin-bottom: 20px;
-            font-size: 0.95rem;
+            margin-bottom: 5px; /* Further reduced margin */
+            font-size: 0.6rem; /* Further reduced font size - very small */
         }
 
         .left-menu .label {
             display: block;
             color: #555555;
-            font-size: 0.8rem;
-            margin-bottom: 5px;
+            font-size: 0.65rem; /* Further reduced font size */
+            margin-bottom: 1px;
         }
 
         .content-area {
-            flex-grow: 1;
-            padding: 20px 40px 40px 40px;
-            overflow-y: auto;
+            padding: 8px 20px 20px 20px; /* Further reduced padding */
             background-color: #FFFFFF;
+            font-size: 0.8rem; /* Further reduced font size */
         }
 
         /* Styles for rendered markdown */
         .content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6 {
             color: #000000;
             border-bottom: 1px solid #dddddd;
-            padding-bottom: 10px;
-            margin-top: 15px;
+            padding-bottom: 6px; /* Further reduced padding */
+            margin-top: 10px; /* Further reduced margin */
         }
-        .content-area h1 { font-size: 2.5rem; border-bottom: 2px solid #0056b3; }
-        .content-area h2 { font-size: 1.7rem; }
-        .content-area h3 { font-size: 1.3rem; color: #0056b3; border-bottom: none; }
+        .content-area h1 { font-size: 1.4rem; border-bottom: 2px solid #0056b3; } /* Further reduced font size */
+        .content-area h2 { font-size: 1.1rem; } /* Further reduced font size */
+        .content-area h3 { font-size: 0.9rem; color: #0056b3; border-bottom: none; } /* Further reduced font size */
         .content-area a { color: #0056b3; text-decoration: none; }
         .content-area a:hover { text-decoration: underline; }
-        .content-area hr { border: 1px solid #dddddd; margin: 40px 0; }
+        .content-area hr { border: 1px solid #dddddd; margin: 10px 0; } /* Further reduced margin */
         .content-area table {
             width: 100%;
             border-collapse: collapse;
-            margin: 25px 0;
+            margin: 8px 0; /* Further reduced margin */
         }
         .content-area th, .content-area td {
             border: 1px solid #cccccc;
-            padding: 12px;
+            padding: 3px; /* Further reduced padding */
             text-align: left;
         }
         .content-area th {
             background-color: #e9e9e9;
             font-weight: bold;
         }
-        .content-area ul { padding-left: 20px; }
-        .content-area li { margin-bottom: 10px; }
-        .content-area p { margin-bottom: 15px; }
+        .content-area ul { padding-left: 10px; } /* Further reduced padding */
+        .content-area li { margin-bottom: 2px; } /* Further reduced margin */
+        .content-area p { margin-bottom: 5px; } /* Further reduced margin */
         .content-area strong { font-weight: bold; color: #0056b3; }
     </style>
 </head>
